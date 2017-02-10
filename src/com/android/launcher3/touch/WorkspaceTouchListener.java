@@ -88,7 +88,7 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         // likely to cause movement.
         mTouchSlop = 2 * ViewConfiguration.get(launcher).getScaledTouchSlop();
         mPm = (PowerManager) workspace.getContext().getSystemService(Context.POWER_SERVICE);
-        mGestureDetector = new GestureDetector(mContext, this);
+        mGestureDetector = new GestureDetector(workspace.getContext(), this);
     }
 
     @Override
@@ -213,8 +213,7 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
 
     @Override
     public boolean onDoubleTap(MotionEvent event) {
-        if (Utilities.isDoubleTapGestureEnabled(mContext))
-            mPm.goToSleep(event.getEventTime());
+        mPm.goToSleep(event.getEventTime());
         return true;
     }
 }
