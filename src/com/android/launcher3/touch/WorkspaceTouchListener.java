@@ -87,8 +87,8 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
         // Use twice the touch slop as we are looking for long press which is more
         // likely to cause movement.
         mTouchSlop = 2 * ViewConfiguration.get(launcher).getScaledTouchSlop();
-        mPm = (PowerManager) workspace.getContext().getSystemService(Context.POWER_SERVICE);
-        mGestureDetector = new GestureDetector(workspace.getContext(), this);
+        mPm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+        mGestureDetector = new GestureDetector(mContext, this);
     }
 
     @Override
@@ -213,7 +213,8 @@ public class WorkspaceTouchListener extends GestureDetector.SimpleOnGestureListe
 
     @Override
     public boolean onDoubleTap(MotionEvent event) {
-        mPm.goToSleep(event.getEventTime());
+        if (Utilities.isDoubleTapGestureEnabled(mContext))
+            mPm.goToSleep(event.getEventTime());
         return true;
     }
 }
