@@ -943,4 +943,12 @@ public final class Utilities {
         SharedPreferences prefs = getPrefs(context.getApplicationContext());
         return prefs.getBoolean(KEY_DT_GESTURE, true);
     }
+
+    public static int getRecentsOpacity(Context context) {
+        return 80;
+    }
+
+    public static int getAllAppsOpacity(Context context) {
+        return 80;
+    }
 }
