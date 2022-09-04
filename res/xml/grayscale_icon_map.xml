@@ -1410,4 +1410,7 @@
     <icon drawable="@drawable/zfont" package="com.htetznaing.zfont2" />
     <icon drawable="@drawable/zomato" package="com.application.zomato" />
     <icon drawable="@drawable/zoom" package="us.zoom.videomeetings" />
+    <icon drawable="@drawable/zencom" package="com.zen.application" />
+    <icon drawable="@drawable/tmobile" package="us.zoom.pl.tmobile.miboa" />
+
 </icons>
