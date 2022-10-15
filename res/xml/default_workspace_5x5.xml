@@ -88,12 +88,12 @@
 
     <appwidget
         launcher:packageName="com.android.deskclock"
-        launcher:className="com.android.alarmclock.DigitalAppWidgetProvider"
+        launcher:className="com.android.alarmclock.AnalogAppWidgetProvider"
         launcher:screen="0"
         launcher:x="0"
         launcher:y="1"
-        launcher:spanX="5"
-        launcher:spanY="2" />
+        launcher:spanX="3"
+        launcher:spanY="3" />
 
     <!-- Google Folder -->
     <!-- Google, Gmail, Maps, YouTube, Drive, YouTube Music, Play Movies, Duo, Photos -->
